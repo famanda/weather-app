@@ -21,6 +21,14 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+small {
+  font-family: "Merriweather", serif;
+  font-size: 10px;
+  text-align: center;
+  position: relative;
+  margin-left: 240px;
+}
+
 .weather {
   max-width: 650px;
   margin: 20px auto;
@@ -57,4 +65,28 @@ li:first-letter {
 
 .weather-temp .active:hover {
   text-decoration: none;
+}
+
+.forecast h3 {
+  font-family: "Merriweather", serif;
+  font-size: 13px;
+  height: 15px;
+  text-align: center;
+  color: #bdbdbd;
+  padding-top: 5px;
+}
+
+.forecast img {
+  display: block;
+  margin: 0 auto;
+  height: 50px;
+  width: 50px;
+}
+
+.forecast-temp {
+  padding-top: 5px;
+  text-align: center;
+  font-size: 13px;
+  height: auto;
+  color: #bdbdbd;
 }
