@@ -14,20 +14,19 @@
       href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
       rel="stylesheet"
     />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather">
         <div class="overview">
-          <h1>
+          <h1 id="current-city">
             Toronto
           </h1>
           <ul>
-            <li>
-              Monday 09:00
-            </li>
-            <li>
+            <li>Last updated: <span id="current-date"></span></li>
+            <li id="current-description">
               Partly Cloudy
             </li>
           </ul>
@@ -41,7 +40,7 @@
                 class="float-left"
               />
               <div class="float-left">
-                <strong>24</strong>
+                <strong id="current-temp">24</strong>
                 <span class="units"> °C | °F </span>
               </div>
             </div>
@@ -51,12 +50,8 @@
               <li>
                 Precipitation: 4%
               </li>
-              <li>
-                Humidity: 68%
-              </li>
-              <li>
-                Wind: 11km/h
-              </li>
+              <li>Humidity: <span id="humidity"></span>%</li>
+              <li>Wind: <span id="speed"></span>km/h</li>
             </ul>
           </div>
         </div>

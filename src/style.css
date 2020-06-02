@@ -17,6 +17,10 @@ li {
   font-size: 15px;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
+
 .weather {
   max-width: 650px;
   margin: 20px auto;
