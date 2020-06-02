@@ -15,6 +15,7 @@
       rel="stylesheet"
     />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/8bb3957345.js" crossorigin="anonymous"></script>
     <title>Weather App</title>
   </head>
   <body>
@@ -22,7 +23,9 @@
       <div class="weather">
         <form id="search-form" class="mb-3">
           <div class="row">
-            <div class="col-10">
+             <div class="col-1">
+              <button type="button" id="current-location"><i id="current-icon" class="fas fa-map-pin"></i></button>
+            </div><div class="col-9">
               <input
                 type="search"
                 placeholder="Enter a city"
@@ -49,6 +52,7 @@
             <li id="current-description">
               Partly Cloudy
             </li>
+            <li>Feels like: <span id="feels-like"></span> °C</li>
           </ul>
         </div>
         <div class="row">

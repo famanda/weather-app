@@ -14,7 +14,7 @@ li {
   color: #bdbdbd;
   margin: 0;
   padding: 0;
-  font-size: 15px;
+  font-size: 13px;
 }
 
 li:first-letter {
@@ -42,20 +42,20 @@ small {
 }
 
 .weather-temp img {
-  margin-right: 10px;
-  height: 60px;
-  width: 60px;
+  margin: 0 auto;
+  height: 85px;
+  width: 85px;
 }
 
 .weather-temp strong {
-  font-size: 50px;
+  font-size: 60px;
   font-weight: 150;
 }
 
 .weather-temp .units {
   position: relative;
-  font-size: 15px;
-  top: -26px;
+  font-size: 16px;
+  top: -30px;
 }
 
 .weather-temp .active {
@@ -89,4 +89,21 @@ small {
   font-size: 13px;
   height: auto;
   color: #bdbdbd;
+}
+
+#current-location {
+  border-radius: 2px;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #0069D9;
+  font-size: 25px;
+  text-align: center;
+  position: relative;
+  bottom: 3px;
+  left: 5px;
+}
+
+#current-location:hover {
+  color: #BDBDBD;
+
 }
