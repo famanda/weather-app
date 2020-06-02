@@ -10,29 +10,41 @@
       integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
       crossorigin="anonymous"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
     <title>Weather App</title>
   </head>
   <body>
     <div class="container">
       <div class="weather">
-        <h1>
-          Toronto
-        </h1>
-        <ul>
-          <li>
-            Monday 09:00
-          </li>
-          <li>
-            Partly Cloudy
-          </li>
-        </ul>
+        <div class="overview">
+          <h1>
+            Toronto
+          </h1>
+          <ul>
+            <li>
+              Monday 09:00
+            </li>
+            <li>
+              Partly Cloudy
+            </li>
+          </ul>
+        </div>
         <div class="row">
           <div class="col-md-6">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
-              alt="PartlyCloudy"
-            />
-            24°C | °F
+            <div class="clearfix weather-temp">
+              <img
+                src="https://ssl.gstatic.com/onebox/weather/48/partly_cloudy.png"
+                alt="PartlyCloudy"
+                class="float-left"
+              />
+              <div class="float-left">
+                <strong>24</strong>
+                <span class="units"> °C | °F </span>
+              </div>
+            </div>
           </div>
           <div class="col-md-6">
             <ul>
@@ -48,13 +60,15 @@
             </ul>
           </div>
         </div>
+        <small>
+          <a
+            href="https://github.com/famanda/vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Felicia Amanda
+        </small>
       </div>
-      <small>
-        <a href="https://github.com/famanda/weather-app" target="_blank"
-          >Open-source code</a
-        >
-        by Felicia Amanda
-      </small>
     </div>
     <script src="src/index.js"></script>
   </body>
