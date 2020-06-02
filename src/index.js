@@ -29,7 +29,10 @@ function displayTemperature(response) {
   let wind = document.querySelector("#speed");
   let date = document.querySelector("#current-date");
   let icon = document.querySelector("#icon");
-  temp.innerHTML = Math.round(response.data.main.temp);
+
+  celsiusTemp = Math.round(response.data.main.temp);
+
+  temp.innerHTML = celsiusTemp;
   city.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = Math.round(response.data.main.humidity);
@@ -54,5 +57,36 @@ function submission(event) {
   search(cityInput.value);
 }
 
+function showFahrenheit(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#current-temp");
+
+  celsius.classList.remove("active");
+  fahrenheit.classList.add("active");
+
+  let fahrenheitTemp = (celsiusTemp * 9) / 5 + 32;
+  temp.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function showCelsius(event) {
+  event.preventDefault();
+  let temp = document.querySelector("#current-temp");
+
+  celsius.classList.add("active");
+  fahrenheit.classList.remove("active");
+
+  temp.innerHTML = celsiusTemp;
+}
+
+let celsiusTemp = null;
+
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", submission);
+
+let celsius = document.querySelector("#celsius");
+celsius.addEventListener("click", showCelsius);
+
+let fahrenheit = document.querySelector("#fahrenheit");
+fahrenheit.addEventListener("click", showFahrenheit);
+
+search("Toronto");
