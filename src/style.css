@@ -91,6 +91,16 @@ small {
   color: #bdbdbd;
 }
 
+.forecast-description {
+  font-size: 10px;
+  text-align: center;
+  color: #bdbdbd;
+}
+
+.forecast-description:first-letter {
+  text-transform: capitalize;
+}
+
 #current-location {
   border-radius: 2px;
   border: 1px solid #cfedf9;
