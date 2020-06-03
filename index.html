@@ -23,9 +23,10 @@
       <div class="weather">
         <form id="search-form" class="mb-3">
           <div class="row">
-             <div class="col-1">
+            <div class="col-1">
               <button type="button" id="current-location"><i id="current-icon" class="fas fa-map-pin"></i></button>
-            </div><div class="col-9">
+            </div>
+            <div class="col-9">
               <input
                 type="search"
                 placeholder="Enter a city"
@@ -55,8 +56,8 @@
             <li>Feels like: <span id="feels-like"></span> °C</li>
           </ul>
         </div>
-        <div class="row">
-          <div class="col-md-6">
+        <div class="row" id="middle">
+          <div class="col-md-5">
             <div class="clearfix weather-temp">
               <img src="" id="icon" class="float-left" />
               <div class="float-left">
@@ -68,10 +69,17 @@
               </div>
             </div>
           </div>
-          <div class="col-md-6">
+          <div class="col-md-4" id="min-max">
             <ul>
+              <li>Min temp: <span id="min-temp"></span>°C</li>
+              <li>Max temp: <span id="max-temp"></span>°C</li>
+            </ul>
+          </div>
+          <div class="col-md-3" id="phw">
+            <ul>
+              <li>Pressure: <span id="pressure"></span>hPa</li>
               <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="speed"></span> km/h</li>
+              <li>Wind: <span id="speed"></span>km/h</li>
             </ul>
           </div>
         </div>

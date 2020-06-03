@@ -26,10 +26,13 @@ function displayTemperature(response) {
   let city = document.querySelector("#current-city");
   let description = document.querySelector("#current-description");
   let feel = document.querySelector("#feels-like");
+  let pressure = document.querySelector("#pressure");
   let humidity = document.querySelector("#humidity");
   let wind = document.querySelector("#speed");
   let date = document.querySelector("#current-date");
   let icon = document.querySelector("#icon");
+  let minTemp = document.querySelector("#min-temp");
+  let maxTemp = document.querySelector("#max-temp");
 
   celsiusTemp = Math.round(response.data.main.temp);
 
@@ -37,6 +40,7 @@ function displayTemperature(response) {
   city.innerHTML = response.data.name;
   description.innerHTML = response.data.weather[0].description;
   feel.innerHTML = Math.round(response.data.main.feels_like);
+  pressure.innerHTML = response.data.main.pressure;
   humidity.innerHTML = Math.round(response.data.main.humidity);
   wind.innerHTML = Math.round(response.data.wind.speed);
   date.innerHTML = formatDate(response.data.dt * 1000);
@@ -45,11 +49,15 @@ function displayTemperature(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
   icon.setAttribute("alt", response.data.weather[0].description);
+  minTemp.innerHTML = Math.round(response.data.main.temp_min);
+  maxTemp.innerHTML = Math.round(response.data.main.temp_max);
 }
 
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   let forecast = response.data.list[0];
+
+  console.log(response.data.list);
 }
 
 function search(city) {
